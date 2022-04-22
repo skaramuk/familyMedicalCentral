@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 using System.Web.Optimization;
 
 namespace FMC
@@ -25,6 +26,11 @@ namespace FMC
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+        }
+
+        internal static void RegisterBundles(object bundles)
+        {
+            throw new NotImplementedException();
         }
     }
 }
