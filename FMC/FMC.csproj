@@ -190,6 +190,10 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\Default\Doctors.cshtml" />
+    <Content Include="Views\Default\News.cshtml" />
+    <Content Include="Views\Default\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

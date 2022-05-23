@@ -14,5 +14,21 @@ namespace FMC.Controllers
             //Layout üzerinde yapılan değişiklikleri görmek için oluşturulmuştur
             return View();
         }
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Doctors()
+        {
+            return View();
+        }
+        public ActionResult News()
+        {
+            return View();
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }
