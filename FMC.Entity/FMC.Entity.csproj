@@ -44,6 +44,13 @@
   <ItemGroup>
     <Compile Include="Base\BaseModel.cs" />
     <Compile Include="Model\Doktor.cs" />
+    <Compile Include="Model\Hasta.cs" />
+    <Compile Include="Model\Hastane.cs" />
+    <Compile Include="Model\Ilac.cs" />
+    <Compile Include="Model\Ilce.cs" />
+    <Compile Include="Model\Randevu.cs" />
+    <Compile Include="Model\Recete.cs" />
+    <Compile Include="Model\Sehir.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

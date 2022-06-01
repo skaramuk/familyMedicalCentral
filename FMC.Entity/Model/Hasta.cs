@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 
 namespace FMC.Entity.Model
 {
-    public class Doktor:BaseModel
+    public class Hasta:BaseModel
     {
         public string Ad { get; set; }
         public string Soyad { get; set; }
-        public string SicilNo { get; set; }
+        public string KimlikNo { get; set; }
+        public string TelefonNo { get; set; }
+        public string Mail { get; set; }
         public string Sifre { get; set; }
-
-        public virtual Hastane Hastane { get; set; }
+        public string Adres { get; set; }
+        public virtual Ilce Ilce { get; set; }
 
         public ICollection<Randevu> RandevuList { get; set; }
     }
