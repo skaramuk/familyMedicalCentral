@@ -13,7 +13,7 @@ namespace FMC.Repository.Base
     {
         protected FmcDbContext fmcDbContext = new FmcDbContext();
 
-        public List<Model> GetList(Func<Model, bool> filter)
+        public List<Model> GetList(Func<Model, bool> filter=null)
         {
             return filter != null ? this.fmcDbContext.Set<Model>().Where(filter).ToList() : this.fmcDbContext.Set<Model>().ToList();
         }

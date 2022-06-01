@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseRepository.cs" />
     <Compile Include="Concrete\DoktorRepository.cs" />
+    <Compile Include="Concrete\SehirRepository.cs" />
     <Compile Include="Concrete\UserRepository.cs" />
     <Compile Include="Context\FmcDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

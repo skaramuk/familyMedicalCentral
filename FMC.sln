@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31912.275
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMC", "FMC\FMC.csproj", "{91CAFBA3-43E8-40F8-BE59-658311F0BFD9}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMC.Service", "FMC.Service\FMC.Service.csproj", "{B9CD1B88-4BF6-4641-8609-8D1FFDEA23D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMC.Core", "FMC.Core\FMC.Core.csproj", "{9036E13F-C273-451E-97EC-69949DE24D7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMC.UI", "FMC.UI\FMC.UI.csproj", "{B06E8451-9B14-4206-BBFC-94181F8B531C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9036E13F-C273-451E-97EC-69949DE24D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9036E13F-C273-451E-97EC-69949DE24D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9036E13F-C273-451E-97EC-69949DE24D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06E8451-9B14-4206-BBFC-94181F8B531C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06E8451-9B14-4206-BBFC-94181F8B531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06E8451-9B14-4206-BBFC-94181F8B531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06E8451-9B14-4206-BBFC-94181F8B531C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
