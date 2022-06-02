@@ -1,17 +1,49 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
+    <div class="banner-section">
+        <div class="container text-center wow fadeInUp">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+                    <li class="breadcrumb-item"><a href="index.html">Aansayfa</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
+                </ol>
+            </nav>
+            <h1 class="font-weight-normal">@ViewBag.Title</h1>
+        </div> <!-- .container -->
+    </div> <!-- .banner-section -->
+</div> <!-- .page-banner -->
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="page-section">
+    <div class="container">
+        <h1 class="text-center wow fadeInUp">Bize Ulaş</h1>
+
+        <form class="contact-form mt-5">
+            <div class="row mb-3">
+                <div class="col-sm-6 py-2 wow fadeInLeft">
+                    <label for="fullName">Ad</label>
+                    <input type="text" id="fullName" class="form-control" placeholder="Adınız..">
+                </div>
+                <div class="col-sm-6 py-2 wow fadeInRight">
+                    <label for="emailAddress">Email</label>
+                    <input type="text" id="emailAddress" class="form-control" placeholder="Email adres..">
+                </div>
+                <div class="col-12 py-2 wow fadeInUp">
+                    <label for="subject">Konu</label>
+                    <input type="text" id="subject" class="form-control" placeholder="Konu Giriniz..">
+                </div>
+                <div class="col-12 py-2 wow fadeInUp">
+                    <label for="message">Mesaj</label>
+                    <textarea id="message" class="form-control" rows="8" placeholder="Mesajınız.."></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary wow zoomIn">Gönder</button>
+        </form>
+    </div>
+</div>
+
+

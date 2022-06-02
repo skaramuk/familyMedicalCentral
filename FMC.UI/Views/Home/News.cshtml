@@ -1,0 +1,185 @@
+﻿
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-sm-6 py-3">
+                        <div class="card-blog">
+                            <div class="header">
+                                <div class="post-category">
+                                    <a href="#">Pandemi</a>
+                                </div>
+                                <a href="blog-details" class="post-thumb">
+                                    <img src="../assets/img/blog/blog_1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="body">
+                                <h5 class="post-title"><a href="blog-details.html">Maymun Çiçeği virüsü pandemi yaratır mı?</a></h5>
+                                <div class="site-info">
+                                    <div class="avatar mr-2">
+                                        <div class="avatar-img">
+                                            <img src="../assets/img/person/person_1.jpg" alt="">
+                                        </div>
+                                        <span>Mahmut Koç</span>
+                                    </div>
+                                    <span class="mai-time"></span> 1 hafta önce
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 py-3">
+                        <div class="card-blog">
+                            <div class="header">
+                                <div class="post-category">
+                                    <a href="#">Covid19</a>
+                                </div>
+                                <a href="blog-details" class="post-thumb">
+                                    <img src="../assets/img/blog/blog_3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="body">
+                                <h5 class="post-title"><a href="blog-details.html">Pandemi bitiyor mu?</a></h5>
+                                <div class="site-info">
+                                    <div class="avatar mr-2">
+                                        <div class="avatar-img">
+                                            <img src="../assets/img/person/person_4.jpg" alt="">
+                                        </div>
+                                        <span>Hanife Demir</span>
+                                    </div>
+                                    <span class="mai-time"></span> 2 hafta önce
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 py-3">
+                        <div class="card-blog">
+                            <div class="header">
+                                <div class="post-category">
+                                    <a href="#">Nöroloji</a>
+                                </div>
+                                <a href="blog-details" class="post-thumb">
+                                    <img src="../assets/img/blog/blog_4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="body">
+                                <h5 class="post-title"><a href="blog-details.html">Ölüm riskiyle en yakından bağlantılı tıbbi olmayan faktörler nelerdir?</a></h5>
+                                <div class="site-info">
+                                    <div class="avatar mr-2">
+                                        <div class="avatar-img">
+                                            <img src="../assets/img/person/person_1.jpg" alt="">
+                                        </div>
+                                        <span>Emre Bol</span>
+                                    </div>
+                                    <span class="mai-time"></span> 4 hafta önce
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-3">
+                        <div class="card-blog">
+                            <div class="header">
+                                <div class="post-category">
+                                    <a href="#">Kardiyoloji</a>
+                                </div>
+                                <a href="blog-details" class="post-thumb">
+                                    <img src="../assets/img/blog/blog_5.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="body">
+                                <h5 class="post-title"><a href="blog-details.html">Bağırsak bakterileri etnik sağlık eşitsizliklerine katkıda bulunur mu?</a></h5>
+                                <div class="site-info">
+                                    <div class="avatar mr-2">
+                                        <div class="avatar-img">
+                                            <img src="../assets/img/person/person_1.jpg" alt="">
+                                        </div>
+                                        <span>Mete Yol</span>
+                                    </div>
+                                    <span class="mai-time"></span> 4 hafta önce
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 my-5">
+                        <nav aria-label="Page Navigation">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Önceki</a>
+                                </li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">1 <span class="sr-only">geçerli</span></a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Sonraki</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div> <!-- .row -->
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">Arama</h3>
+                        <form action="#" class="search-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Aramak istediğiniz anahtar kelimeler">
+                                <button type="submit" class="btn"><span class="icon mai-search"></span></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">Kategoriler</h3>
+                        <ul class="categories">
+                            <li><a href="#">Pandemi <span>1</span></a></li>
+                            <li><a href="#">Covid19 <span>1</span></a></li>
+                            <li><a href="#">Kardiyoloji <span>1</span></a></li>
+                            <li><a href="#">Nöroloji <span>1</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">Sık Görüntülenen</h3>
+                        <div class="blog-item">
+                            <a class="post-thumb" href="">
+                                <img src="../assets/img/blog/blog_1.jpg" alt="">
+                            </a>
+                            <div class="content">
+                                <h5 class="post-title"><a href="#">Maymun Çiçeği virüsü pandemi yaratır mı?</a></h5>
+                                <div class="meta">
+                                    <a href="#"><span class="mai-calendar"></span> 17 Haziran 2022</a>
+                                    <a href="#"><span class="mai-person"></span> Mahmut Koç</a>
+                                    <a href="#"><span class="mai-chatbubbles"></span> 19</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <a class="post-thumb" href="">
+                                <img src="../assets/img/blog/blog_3.jpg" alt="">
+                            </a>
+                            <div class="content">
+                                <h5 class="post-title"><a href="#">Pandemi bitiyor mu?</a></h5>
+                                <div class="meta">
+                                    <a href="#"><span class="mai-calendar"></span> 10 Haziran 2022</a>
+                                    <a href="#"><span class="mai-person"></span> Hanife Demir</a>
+                                    <a href="#"><span class="mai-chatbubbles"></span> 12</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+</div>
+

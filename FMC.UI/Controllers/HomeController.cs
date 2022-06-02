@@ -26,5 +26,13 @@ namespace FMC.UI.Controllers
 
             return View();
         }
+        public ActionResult Doctors()
+        {
+            return View();
+        }
+        public ActionResult News()
+        {
+            return View();
+        }
     }
 }
