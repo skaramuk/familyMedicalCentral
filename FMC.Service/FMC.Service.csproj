@@ -44,6 +44,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DoktorService.cs" />
     <Compile Include="Services\HastaneService.cs" />
+    <Compile Include="Services\HastaService.cs" />
+    <Compile Include="Services\IlacService.cs" />
+    <Compile Include="Services\IlceService.cs" />
+    <Compile Include="Services\RandevuService.cs" />
+    <Compile Include="Services\ReceteService.cs" />
     <Compile Include="Services\SehirService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
