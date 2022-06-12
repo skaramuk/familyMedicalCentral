@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HastaneController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -315,6 +316,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Hastane\" />
     <Folder Include="Views\Register\" />
   </ItemGroup>
   <ItemGroup>
@@ -329,6 +331,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FMC.Entity\FMC.Entity.csproj">
+      <Project>{ed65f760-9d5b-4055-b76a-9f70e88dc096}</Project>
+      <Name>FMC.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FMC.Service\FMC.Service.csproj">
+      <Project>{B9CD1B88-4BF6-4641-8609-8D1FFDEA23D7}</Project>
+      <Name>FMC.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
