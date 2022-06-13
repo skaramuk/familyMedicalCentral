@@ -16,7 +16,6 @@ namespace FMC.Service.Services
         {
             return receteRepository.GetList();
         }
-        //kimlik numarasına göre reçete arama ve listeleme ekle
 
         public Recete Create(Recete recete)
         {

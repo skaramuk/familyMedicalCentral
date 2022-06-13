@@ -19,7 +19,7 @@ namespace FMC.Service.Services
 
         public Randevu GetByKimlik(string kimlik)
         {
-            return randevuRepository.Get(x => x.Hasta.ToString() == kimlik);
+            return randevuRepository.Get(x => x.Hasta.KimlikNo == kimlik);
         }
 
         public Randevu Create(Randevu randevu)

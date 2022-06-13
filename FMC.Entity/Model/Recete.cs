@@ -11,5 +11,7 @@ namespace FMC.Entity.Model
     {
         public string Not { get; set; }
         public virtual Ilac Ilac { get; set; }
+
+        public ICollection<Randevu>RandevuList { get; set; }
     }
 }

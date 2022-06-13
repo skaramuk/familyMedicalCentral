@@ -1,5 +1,6 @@
 ﻿using FMC.Entity.Model;
 using FMC.Repository.Concrete;
+using FMC.Service.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,10 @@ namespace FMC.Service.Services
         {
              hastaRepository.Delete(hasta);
              return hasta;
+        }
+        public Hasta Login(LoginModel hasta)
+        {
+           return hastaRepository.Get(x=>x.KimlikNo==hasta.Kimlikno&&x.Sifre==hasta.Sifre);
         }
     }
 }
