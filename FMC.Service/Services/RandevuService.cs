@@ -27,10 +27,11 @@ namespace FMC.Service.Services
             return randevuRepository.Add(randevu);
         }
 
-        //public Randevu Delete(Randevu randevu)
-        //{
-        //    return randevuRepository.Delete(randevu);
-        //}
+        public Randevu Delete(Randevu randevu)
+        {
+            randevuRepository.Delete(randevu);
+            return randevu;
+        }
 
         public Randevu Update(Randevu randevu)
         {

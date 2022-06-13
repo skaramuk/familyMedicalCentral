@@ -27,9 +27,10 @@ namespace FMC.Service.Services
             return receteRepository.Update(recete);
         }
 
-        //public Recete Delete(Recete recete)
-        //{
-        //    return receteRepository.Delete(recete);
-        //}
+        public Recete Delete(Recete recete)
+        {
+           receteRepository.Delete(recete);
+            return recete;
+        }
     }
 }

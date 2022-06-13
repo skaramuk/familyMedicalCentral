@@ -25,9 +25,10 @@ namespace FMC.Service.Services
         {
             return hastaRepository.Add(hasta);
         }
-        //public Hasta Delete(Hasta hasta)
-        //{
-        //    return hastaRepository.Delete(hasta);
-        //}
+        public Hasta Delete(Hasta hasta)
+        {
+             hastaRepository.Delete(hasta);
+             return hasta;
+        }
     }
 }
