@@ -129,7 +129,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HastaneController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IlacController.cs" />
+    <Compile Include="Controllers\RandevuController.cs" />
+    <Compile Include="Controllers\ReceteController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\SehirController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -317,7 +321,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Ilac\" />
+    <Folder Include="Views\Randevu\" />
+    <Folder Include="Views\Recete\" />
     <Folder Include="Views\Register\" />
+    <Folder Include="Views\Sehir\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
