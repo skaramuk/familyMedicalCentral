@@ -1,0 +1,101 @@
+﻿@using FMC.Entity.Model
+@model Hasta
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutLoginForm.cshtml";
+}
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                    <span class="login100-form-title p-b-26">
+                        Hoş Geldiniz
+                    </span>
+                    <div class="wrap-input100 validate-input">
+                        @Html.TextBoxFor(m => m.Ad, new { @class = "input100", placeholder = "Adınız", required = true })
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        @Html.TextBoxFor(m => m.Soyad, new { @class = "input100", placeholder = "Soyadınız", required = true })
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        @Html.TextBoxFor(m => m.KimlikNo, new { @class = "input100", placeholder = "Kimlik Numaranız", required = true })
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        @Html.TextBoxFor(m => m.TelefonNo, new { @class = "input100", placeholder = "Telefon Numaranız", required = true })
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        @Html.TextBoxFor(m => m.Mail, new { @class = "input100", placeholder = "Mail Adresiniz", required = true })
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        <select id="sehir">
+                            @foreach (var item in ViewBag.sehirler as List<Sehir>)
+                            {
+                                <option value="@item.Id">@item.Ad</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        <select id="ilce" name="@Html.NameFor(x=>x.Ilce.Id)">
+                            <option value="value">text</option>
+                        </select>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        <span class="btn-show-pass">
+                            <i class="zmdi zmdi-eye"></i>
+                        </span>
+                        @Html.TextBoxFor(m => m.Sifre, new { @class = "input100", placeholder = "Şifreniz", required = true })
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" type="submit">
+                                Kayıt Ol
+                            </button>
+                        </div>
+                    </div>
+                <div class="text-center p-t-115">
+                    <span class="txt1">
+                        Hesabınız var mı?
+                    </span>
+                    <a class="txt2" href="/Register/Login">
+                        Giriş Yap
+                    </a>
+                </div>
+                <span class="txt1">
+                    Ana Sayfaya Dönmek İçin
+                </span>
+                <a class="txt2" href="/Home/Index">
+                    Tıklayın
+                </a>
+            </div>
+        </div>
+    </div>
+}
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#sehir").change(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Register/GetIlceSelect?sehirId=" + $(this).val(),
+                    dataType: "html",
+                    success: function (response) {
+                        $("#ilce").html(response)
+                    }
+                });
+            })
+        })
+    </script>
+    }

@@ -16,9 +16,9 @@ namespace FMC.Service.Services
         {
             return ilceRepository.GetList();
         }
-        public Ilce GetByIlce(string sehirad)
+        public List<Ilce> GetByIl(int sehirid)
         {
-            return ilceRepository.Get(x => x.Sehir.Ad == sehirad);
+            return ilceRepository.GetList(x => x.Sehir.Id == sehirid);
         }
     }
 }

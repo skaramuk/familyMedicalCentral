@@ -1,4 +1,5 @@
 ﻿using FMC.Entity.Model;
+using FMC.Service.Models;
 using FMC.Service.Services;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,12 @@ namespace FMC.UI.Controllers
     {
         // GET: Register
         private HastaService hastaService = new HastaService();
+        private IlceService ilceService = new IlceService();
+        private SehirService sehirService = new SehirService();
         [HttpGet]
         public ActionResult Register()
         {
+            ViewBag.sehirler = sehirService.GetAll();
             return View();
         }
         [HttpPost]
@@ -22,6 +26,21 @@ namespace FMC.UI.Controllers
         {
             hastaService.Create(hasta);
             return RedirectToAction("Login");
+        }
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(LoginModel hasta)
+        {
+            hastaService.Login(hasta);
+            return RedirectToAction("Add", "Randevu");
+        }
+        public PartialViewResult GetIlceSelect(int sehirId)
+        {
+            return PartialView(ilceService.GetByIl(sehirId).Select(x=>new SelectListItem {Value=x.Id.ToString(),Text=x.Ad }));
         }
     }
 }

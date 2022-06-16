@@ -1,0 +1,10 @@
+﻿@using FMC.Entity.Model
+@model IEnumerable<SelectListItem>
+
+
+
+    @foreach (var item in Model)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+

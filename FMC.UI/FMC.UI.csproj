@@ -130,6 +130,7 @@
     <Compile Include="Controllers\HastaneController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IlacController.cs" />
+    <Compile Include="Controllers\IlceController.cs" />
     <Compile Include="Controllers\RandevuController.cs" />
     <Compile Include="Controllers\ReceteController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -317,14 +318,17 @@
     <Content Include="Views\Home\Doctors.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Hastane\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutLoginForm.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Register\GetIlceSelect.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Ilac\" />
+    <Folder Include="Views\Ilce\" />
     <Folder Include="Views\Randevu\" />
     <Folder Include="Views\Recete\" />
-    <Folder Include="Views\Register\" />
     <Folder Include="Views\Sehir\" />
   </ItemGroup>
   <ItemGroup>
