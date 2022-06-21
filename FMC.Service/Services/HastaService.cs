@@ -18,13 +18,13 @@ namespace FMC.Service.Services
             return hastaRepository.GetList();
         }
         
-        public Hasta GetById(string kimlik)
+        public Hasta GetByKimlikNo(string kimlik)
         {
             return hastaRepository.Get(x => x.KimlikNo == kimlik);
         }
         public Hasta Create(Hasta hasta)
         {
-            return hastaRepository.Add(hasta);
+            return hastaRepository.Add(hasta,true);
         }
         public Hasta Delete(Hasta hasta)
         {

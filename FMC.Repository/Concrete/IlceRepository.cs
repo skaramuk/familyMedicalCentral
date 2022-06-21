@@ -10,5 +10,9 @@ namespace FMC.Repository.Concrete
 {
    public class IlceRepository:BaseRepository<Ilce>
     {
+        public Ilce Add(Ilce ilce)
+        {
+            return ilce;
+        }
     }
 }

@@ -20,5 +20,9 @@ namespace FMC.Service.Services
         {
             return doktorRepository.GetList(x => x.Ad == isim);
         }
+        public List<Doktor> GetByHastane(int hastaneId)
+        {
+            return doktorRepository.GetList(x => x.Hastane.Id == hastaneId);
+        }
     }
 }

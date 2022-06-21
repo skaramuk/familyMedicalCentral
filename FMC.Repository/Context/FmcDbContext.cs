@@ -20,16 +20,5 @@ namespace FMC.Repository.Context
         public DbSet<Recete> Recetes { get; set; }
         public DbSet<Sehir> Sehirs { get; set; }
 
-        public FmcDbContext()
-        {
-            Database.SetInitializer(new VeritabaniOlusturucu());
-        }
-    }
-    public class VeritabaniOlusturucu : CreateDatabaseIfNotExists<FmcDbContext>
-    {
-        protected override void Seed(FmcDbContext context)
-        {
-
-        }
     }
 }

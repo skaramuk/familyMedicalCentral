@@ -1,0 +1,55 @@
+﻿@using FMC.Entity.Model
+@model Hasta
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLoginForm.cshtml";
+}
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <span class="login100-form-title p-b-26">
+                    Hoş Geldiniz
+                </span>
+                <div class="wrap-input100 validate-input">
+                    @Html.TextBoxFor(m => m.KimlikNo, new { @class = "input100", placeholder = "Kimlik Numaranız", required = true })
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input">
+                    <span class="btn-show-pass">
+                        <i class="zmdi zmdi-eye"></i>
+                    </span>
+                    @Html.TextBoxFor(m => m.Sifre, new { @class = "input100", placeholder = "Şifreniz", required = true })
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" type="submit">
+                            Giriş Yap
+                        </button>
+                    </div>
+                </div>
+                <div class="text-center p-t-115">
+                    <span class="txt1">
+                        Hesabınız yok mu?
+                    </span>
+                    <a class="txt2" href="/Register/Register">
+                        Kayıt Ol
+                    </a>
+                </div>
+                <span class="txt1">
+                    Ana Sayfaya Dönmek İçin
+                </span>
+                <a class="txt2" href="/Home/Index">
+                    Tıklayın
+                </a>
+            </div>
+        </div>
+    </div>
+}
+

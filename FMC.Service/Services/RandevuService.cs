@@ -24,7 +24,7 @@ namespace FMC.Service.Services
 
         public Randevu Create(Randevu randevu)
         {
-            return randevuRepository.Add(randevu);
+            return randevuRepository.Add(randevu,true);
         }
 
         public Randevu Delete(Randevu randevu)
@@ -35,7 +35,17 @@ namespace FMC.Service.Services
 
         public Randevu Update(Randevu randevu)
         {
-            return randevuRepository.Update(randevu);
+            Randevu randevu1 = randevuRepository.Get(x => x.Id == randevu.Id);
+            randevu1.Tarih = randevu.Tarih;
+            return randevuRepository.Update(randevu1);
+        }
+        public Randevu GetById(int randevuId)
+        {
+            return randevuRepository.Get(x => x.Id == randevuId);
+        }
+        public List<Randevu> GetAllByKimlik(string kimlik)
+        {
+            return randevuRepository.GetList(x=>x.Hasta.KimlikNo==kimlik);
         }
     }
 }

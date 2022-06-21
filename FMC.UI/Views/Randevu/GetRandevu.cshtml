@@ -1,0 +1,11 @@
+﻿@using FMC.Entity.Model
+@model Randevu
+
+@{
+    ViewBag.Title = "GetRandevu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<ul class="list-group">
+    <li class="list-group-item">@((ViewBag.randevu as Randevu).Hasta.KimlikNo), @((ViewBag.randevu as Randevu).Hasta.Ad),@((ViewBag.randevu as Randevu).Doktor.Ad),@((ViewBag.randevu as Randevu).Doktor.Soyad),@((ViewBag.randevu as Randevu).Tarih)</li>
+</ul>

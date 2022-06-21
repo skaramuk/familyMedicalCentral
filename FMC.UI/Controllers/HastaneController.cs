@@ -11,21 +11,11 @@ namespace FMC.UI.Controllers
     public class HastaneController : Controller
     {
         private HastaneService hastaneService = new HastaneService();
+        private IlceService ilceService = new IlceService();
         // GET: Hastane
         public ActionResult Index()
         {
             return View(hastaneService.GetAll());
-        }
-        [HttpGet]
-        public ActionResult Add()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Add(Hastane hastane)
-        {
-            hastaneService.Add(hastane);
-            return RedirectToAction("Index");
         }
     }
 }

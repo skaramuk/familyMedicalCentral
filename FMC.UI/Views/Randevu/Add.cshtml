@@ -1,0 +1,97 @@
+﻿@using FMC.Entity.Model
+@model Randevu
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <form>
+        <div class="form-group">
+            <div class="form-group">
+                <label for="exampleInputPassword1">Kimlik Numaranız:</label>
+                @Html.TextBoxFor(x => x.Hasta.KimlikNo, new { @class = "form-control" })
+            </div>
+            <label for="exampleInputEmail1">Şehir Seçiniz:</label>
+            <div class="form-group">
+                <select class="form-control" id="sehir">
+                    @foreach (var item in ViewBag.sehirler as List<Sehir>)
+                    {
+                        <option value="@item.Id">@item.Ad</option>
+                    }
+                </select>
+            </div>
+            <label for="exampleInputEmail1">İlçe Seçiniz:</label>
+            <div class="form-group">
+                <select class="form-control" id="ilce" name="@Html.NameFor(x=>x.Hasta.Ilce.Id)">
+                    <option value="value">text</option>
+                </select>
+            </div>
+            <label for="exampleInputEmail1">Hastane Seçiniz:</label>
+            <div class="form-group">
+                <select class="form-control" id="hastane" name="@Html.NameFor(x=>x.Doktor.Hastane.Id)">
+                    <option value="value">text</option>
+                </select>
+            </div>
+            <label for="exampleInputEmail1">Doktor Seçiniz:</label>
+            <div class="form-group">
+                <select class="form-control" id="doktor" name="@Html.NameFor(x=>x.Doktor.Id)">
+                    <option value="value">text</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Tarih Seçiniz:</label>
+                @Html.TextBoxFor(x => x.Tarih,"{0:yyyy-MM-ddTHH:mm:ss}", new { 
+               @class = "form-control",
+               @type="datetime-local" 
+           })
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Randevu Al</button>
+    </form>
+}
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#sehir").change(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Register/GetIlceSelect?sehirId=" + $(this).val(),
+                    dataType: "html",
+                    success: function (response) {
+                        $("#ilce").html(response)
+                    }
+                });
+            })
+        })
+        $(document).ready(function () {
+            $("#ilce").change(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Randevu/GetHastaneSelect?ilceId=" + $(this).val(),
+                    dataType: "html",
+                    success: function (response) {
+                        $("#hastane").html(response)
+                    }
+                });
+            })
+        })
+        $(document).ready(function () {
+            $("#hastane").change(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Randevu/GetDoktorSelect?hastaneId=" + $(this).val(),
+                    dataType: "html",
+                    success: function (response) {
+                        $("#doktor").html(response)
+                    }
+                });
+            })
+        })
+    </script>
+}
+

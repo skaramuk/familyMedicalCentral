@@ -1,0 +1,33 @@
+﻿@using FMC.Entity.Model
+@model IEnumerable<Randevu>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Kimlik Numarası</th>
+            <th>Adı</th>
+            <th>Soyadı</th>
+            <th>Doktor Adı</th>
+            <th>Doktor Soyadı</th>
+            <th>Randevu Saati</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Hasta.KimlikNo</td>
+                <td>@item.Hasta.Ad</td>
+                <td>@item.Hasta.Soyad</td>
+                <td>@item.Doktor.Ad</td>
+                <td>@item.Doktor.Soyad</td>
+                <td>@item.Tarih</td>
+                <td>@Html.ActionLink("Düzenle","Update","Randevu",new {randevuId=item.Id},new { @class = "btn btn-warning" })</td>
+                <td>@Html.ActionLink("Sil", "DeleteById", "Randevu", new { Id = item.Id }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musun?')" })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

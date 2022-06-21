@@ -24,8 +24,18 @@ namespace FMC.UI.Controllers
         [HttpPost]
         public ActionResult Register(Hasta hasta)
         {
-            hastaService.Create(hasta);
-            return RedirectToAction("Login");
+            
+            if (ModelState.IsValid)
+            {
+                Session["ilceid"] = hasta.Ilce.Id;
+                hastaService.Create(hasta);
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                return View();
+            }
+           
         }
         [HttpGet]
         public ActionResult Login()

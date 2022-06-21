@@ -1,0 +1,44 @@
+﻿@using FMC.Entity.Model
+@model Randevu
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <center><h2>Randevu Sorgulama Ekranı</h2></center>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Kimlik Numaranızı Giriniz:</label>
+            @Html.TextBoxFor(x => x.Hasta.KimlikNo, new { @class = "form-control", id="tc_no"})
+        </div>
+        @*@Html.ActionLink("Sorgula", "Search", "Randevu", new { @class = "btn btn-primary" }, new { KimlikNo =})*@
+    <button id="randevu_getir" type="button" class="btn btn-primary">Sorgula</button>
+    <div id="randevular">
+
+    </div>
+    </form>
+}
+@section scripts{
+<script>
+   
+    $(document).ready(function () {
+        $("#randevu_getir").click(function (e) {
+            $.ajax({
+                type: "GET",
+                url: "/Randevu/GetRandevuList?tc=" + $("#tc_no").val(),
+                dataType: "html",
+                success: function (response) {
+                    $("#randevular").html(response);
+                }
+            });
+        });
+    });
+    
+</script>
+    }
+

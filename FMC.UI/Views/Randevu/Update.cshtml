@@ -1,0 +1,22 @@
+﻿@using FMC.Entity.Model
+@model Randevu
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x=>x.Id)
+
+    <h2>Yalnızca Tarihi Güncelleyebilirsiniz</h2>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Tarih Giriniz:</label>
+            @Html.TextBoxFor(x=>x.Tarih, "{0:yyyy-MM-ddTHH:mm:ss}", new {@class="form-control", @type="datetime-local"})
+        </div>
+        <button type="submit" class="btn btn-primary">Randevu Güncelle</button>
+    </form>
+}
+
